@@ -1,0 +1,386 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    margin-left: 6rem;
+    margin-right: auto;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    padding: auto;
+    margin: 4rem 6rem;
+}
+
+.header__title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Espacio entre el logo y el texto */
+}
+
+.header__title-text {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.main {
+    padding: 1rem;
+}
+
+.section {
+    margin-bottom: 2rem;
+}
+
+.section__title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* NOVEDADES */
+
+.section--news {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinea los contenedores al principio */
+    margin: 1rem 6rem; /* Añade margen a los lados */
+    gap: 1rem; /* Espacio entre los dos contenedores */
+}
+
+.container-left,
+.container-right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.container-left {
+    flex: 3; /* Contenedor izquierdo más ancho */
+    justify-content: space-between;
+}
+
+.container-right {
+    flex: 2; /* Contenedor derecho más estrecho */
+    justify-content: flex-end; /* Alinea todo el contenido hacia la parte inferior */
+    margin-top: auto; /* Asegura que el contenedor derecho se alinee al final del contenedor izquierdo */
+}
+
+.news-card-large {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%; /* Asegura que la tarjeta ocupe el ancho completo de su contenedor */
+}
+
+.news-card__image-large {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+}
+
+.news-card__content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    align-items: end;
+    max-width: 100%; /* Asegura que la tarjeta ocupe el ancho completo de su contenedor */
+    height: 100%;
+}
+
+.news-card__image {
+    width: 45%; /* Mantén el ancho de la imagen */
+    height: 100%; /* Asegura que la imagen ocupe todo el alto de la tarjeta */
+    object-fit: cover; /* Recorta la imagen si es necesario para mantener la proporción */
+    border-radius: 8px 0 0 8px; /* Redondea solo la esquina izquierda */
+}
+
+.news-card__content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%; /* Ocupa el espacio restante */
+}
+
+.news-card__date {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.news-card__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+
+.news-card__author {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #333;
+    margin-top: 1rem; /* Espacio superior entre el título y el autor */
+}
+
+.news-card__author-logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+
+/* POPULARES */
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Alinea el contenido al final */
+    max-width: 100%; /* Asegura que la tarjeta ocupe el ancho completo de su contenedor */
+    margin-bottom: 1rem; /* Espacio inferior entre tarjetas */
+}
+
+.card__image {
+    width: 100%;
+    height: 80%; /* Altura fija para las imágenes más anchas */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+}
+
+.card__content {
+    padding: 1rem;
+}
+
+.card__date {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.card__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+
+.card__author {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #333;
+}
+
+.card__author-logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.card--small {
+    display: flex;
+    align-items: center;
+}
+
+.card--small .card__content {
+    flex: 1;
+}
+
+.section--popular-categories {
+    display: flex;
+    gap: 6rem;
+    align-items: flex-start; /* Alinea las secciones al principio (top) */
+    margin: 0 4rem; /* Añade margen a los lados */
+}
+
+.popular {
+    flex: 2;
+    margin-left: 2rem; /* Más margen a la izquierda */
+}
+
+.popular .news__main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+    gap: 1rem; /* Espacio entre las tarjetas */
+}
+
+/* CATEGORIAS */
+
+.categories {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem; /* Más margen a la derecha */
+}
+
+.categories__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.categories__item {
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: right;
+    font-weight: 700;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    height: 100px; /* Altura fija para alinear con la sección de populares */
+}
+
+.categories__logo {
+    margin-right: auto;
+    width: 100px;
+    height: 100px;
+    
+}
+
+.categories__item--html { background-color: #E93E30; color: white; }
+.categories__item--js { background-color: #F7E018; color: white; }
+.categories__item--css { background-color: #299ED5; color: white; }
+.categories__item--react { background-color: #292C33; color: white; }
+.categories__item--vue { background-color: #67C770; color: white; }
+.categories__item--bootstrap { background-color: #563D7C; color: white; }
+
+.categories__item--all {
+    font-size: 20px;
+    font-weight: 400;
+    color: #171717;
+    text-decoration: none;
+    
+}
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #171717;
+    padding: 1rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid #ddd;
+    margin-left: 12rem;
+    margin-right: 6rem;
+    
+}
+
+.footer__left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Espacio entre el logo y el texto */
+}
+
+.footer__logo {
+    width: 24px; /* Tamaño pequeño del logo */
+    height: auto; /* Mantener la proporción del logo */
+}
+
+.footer__right {
+    
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.footer__blog {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+@media (max-width: 768px) {
+    /* Centrar el contenido del header__title en una sola línea */
+    .header__title {
+        display: flex;
+        align-items: center; /* Centra verticalmente el texto y el logo */
+        justify-content: center; /* Centra horizontalmente */
+        flex-direction: row; /* Asegura que el texto y el logo estén en una fila */
+        text-align: center; /* Centra el texto si es necesario */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Centramos las secciones y establecemos márgenes uniformes */
+    .section--news, .section--popular-categories {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem auto; /* Centramos las secciones horizontalmente */
+        width: 100%; /* Aseguramos que el ancho sea del 100% */
+    }
+
+    /* Contenedores internos con el mismo ancho y margen */
+    .container-left, .container-right {
+        flex: 1;
+        margin: 1rem; /* Márgenes uniformes */
+        width: 100%; /* Aseguramos que el ancho sea del 100% */
+    }
+
+    /* Estilo para la sección de categorías y popular */
+    .section--popular-categories {
+        gap: 2rem;
+        width: 100%; /* Aseguramos que el ancho sea del 100% */
+    }
+
+    .popular, .categories {
+        flex: 1;
+        width: 100%; /* Aseguramos que el ancho sea del 100% */
+    }
+
+    /* Ajustamos la grilla principal */
+    .news__main {
+        display: grid;
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    /* Estilo para los ítems de categorías */
+    .categories__item {
+        font-size: 24px; /* Ajustar el tamaño de fuente */
+        height: auto; /* Ajustar la altura */
+    }
+
+    /* Alineamos el texto a la izquierda en las secciones */
+    .section--news, .section--popular-categories, .container-left, .container-right, .popular, .categories {
+        text-align: left;
+    }
+
+    /* Centrar el contenido del footer */
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        text-align: center; 
+    }
+
+    .footer__left {
+        margin-bottom: 0.5rem; /
+    }
+
+    .footer__right {
+        margin-top: 0; 
+        font-size: 15px;
+    }
+}
+
+
