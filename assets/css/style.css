@@ -20,7 +20,7 @@ body {
 .header__title {
     display: flex;
     align-items: center;
-    gap: 0.5rem; /* Espacio entre el logo y el texto */
+    gap: 0.5rem; 
 }
 
 .header__title-text {
@@ -47,9 +47,9 @@ body {
 .section--news {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Alinea los contenedores al principio */
-    margin: 1rem 6rem; /* Añade margen a los lados */
-    gap: 1rem; /* Espacio entre los dos contenedores */
+    align-items: flex-start; 
+    margin: 1rem 6rem; 
+    gap: 1rem;
 }
 
 .container-left,
@@ -60,7 +60,7 @@ body {
 }
 
 .container-left {
-    flex: 3; /* Contenedor izquierdo más ancho */
+    flex: 3; 
     justify-content: space-between;
 }
 
